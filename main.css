@@ -17,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Merriweather', serif;
 }
 
 main {
@@ -24,8 +25,27 @@ main {
     flex-direction: column;
     justify-content: center;
 }
+
+h2 {
+    font-size: 100px;
+}
   
 .typewriter-div {
     margin-left: 100px;
     margin-right: 100px;
 }
+
+.typewrite > .wrap { 
+    border-right: 0.1em solid black;
+}
+
+span {
+    /* border-right: .05em solid; */
+    animation: caret 1s steps(1) infinite;
+  }
+  
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
