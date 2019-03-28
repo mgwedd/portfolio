@@ -1,12 +1,16 @@
 /* Initial universal styles */
-* {
-    background-color: white; 
-    color: black; 
+*, *:before, *:after{
+    /* background-color: white; 
+    color: black;  */
     text-decoration: none;
+    box-sizing: inherit;
+}
+
+html {
     box-sizing: border-box;
 }
 
-/* Basic style params */
+/* More basics. Set up body as an overall flex container. */
 body {
     position: absolute;
     top: 0;
@@ -20,18 +24,44 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+/* Main as a flex container */
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/* The h2 currently applies to the typewriter text */
 h2 {
     font-size: 50px;
 }
 
+/* Remove default styles from uls for the nav bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* li a:hover {
+    background-color: black;
+    color: white;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+} */
+
+/* Add the blinking cursor to the typewriter feature */
 span {
     animation: caret 1s steps(1) infinite;
+    border-right: 0.13em solid black;
+    padding-right: 5px;
+    color: black;
   }
   
   @keyframes caret {
@@ -40,12 +70,81 @@ span {
     }
   }
 
+/* Layout for the typewriter box*/
 .typewriter-div {
     margin-left: 100px;
     margin-right: 100px;
 }
 
-.typewrite > .wrap { 
-    border-right: 0.1em solid black;
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 125px;
+    background-color: black;
 }
 
+.navbar li {
+  /* float: left; */
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: white;
+}
+
+.navbar > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: inherit;   
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Remember to add an active class for this later on! */
+/* .navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+} */
+
+/* Hide open/close link on small screens */
+.navbar .icon {
+    display: none;
+}
+/* .navbar > ul {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    background-color: black;
+    height: 150px;
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+} */
+
+
+/* 
+.navbar > ul > li:hover {
+    background-color: slategray;
+    color: white;
+} */
+
+/* .nav-bar #nav-home {
+}
+
+.nav-bar #nav-projects {
+}
+
+.nav-bar #nav-blog {
+}
+
+.nav-bar #nav-contact {
+} */
