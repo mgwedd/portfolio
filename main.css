@@ -97,7 +97,7 @@ span {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .navbar a:hover {
@@ -111,3 +111,18 @@ span {
 .navbar .icon {
     display: none;
 }
+
+/* @media (min-width: 320px) and (max-width: 768px) {
+
+    .navbar {
+        height: 125px;
+    }
+
+    /* You need to center vertically the text on the higher mobile navbar size 
+    .navbar a {
+        top: 50px;
+    }
+
+} */
+
+/* @media for dekstop screen size, ease in to a side nav on the left with rotation, so that the */
