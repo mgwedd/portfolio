@@ -1,3 +1,4 @@
+// This is the constructor 
 const TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -8,6 +9,7 @@ const TxtType = function(el, toRotate, period) {
     this.isDeleting = false;
 };
 
+// This is the prototype (tick) for the class TxtType
 TxtType.prototype.tick = function() {
     let i = this.loopNum % this.toRotate.length;
     let fullTxt = this.toRotate[i];
@@ -39,6 +41,7 @@ TxtType.prototype.tick = function() {
     }, delta);
 };
 
+// Instantiate the TxtType class, referring to the nearest tick definition (above in the chain)
 window.onload = function() {
     const elements = document.getElementsByClassName('typewrite');
     for (let i=0; i<elements.length; i++) {
