@@ -45,11 +45,6 @@ a {
     transition: all .15s ease-in-out;
 }
 
-a.active {
-    background-color: #e2725b;
-    color: white;
-} 
-
 .navbar {
     overflow: hidden;
     position: fixed;
@@ -69,7 +64,7 @@ a.active {
     font-size: 40px;
 }
 
-.navbar a:hover {
+.navbar a:hover, .active{
     background-color: #e2725b;
     color: black;
     transform: scale(1.15);
