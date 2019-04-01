@@ -40,8 +40,6 @@ main {
 
 a {
     margin: 0 auto;
-    /* -webkit-transition: padding 2s;
-    transition: padding 2s; */
     transition: all .15s ease-in-out;
 }
 
