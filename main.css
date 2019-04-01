@@ -29,24 +29,14 @@ main {
     justify-content: center;
 }
 
-/* The h2 currently applies to the typewriter text */
-h2 {
-    font-size: 50px;
+/* TYPEWRITER STYLES */
+.typewriter {
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 25px;
 }
 
-/* Remove default styles from uls for the nav bar */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    background-color: white;
-    width: 125px;
-    height: 75px;
-    text-align: center;
-}
+/* NAV BAR STYLES */
 
 a {
     margin: 0 auto;
@@ -59,27 +49,6 @@ a.active {
     background-color: #e2725b;
     color: white;
 } 
-
-/* Add the blinking cursor to the typewriter feature */
-span {
-    animation: caret 1s steps(1) infinite;
-    border-right: 0.13em solid black;
-    padding-right: 5px;
-    color: black;
-  }
-  
-  @keyframes caret {
-    50% {
-      border-color: transparent;
-    }
-  }
-
-
-/* Layout for the typewriter box*/
-.typewriter-div {
-    margin-left: 100px;
-    margin-right: 100px;
-}
 
 .navbar {
     overflow: hidden;
@@ -112,17 +81,18 @@ span {
     display: none;
 }
 
-/* @media (min-width: 320px) and (max-width: 768px) {
+/* RESPONSIVE MEDIA QUERIES */
+@media (min-width: 320px) and (max-width: 768px) {
 
     .navbar {
         height: 125px;
     }
 
-    /* You need to center vertically the text on the higher mobile navbar size 
-    .navbar a {
+    /* You need to center vertically the text on the higher mobile navbar size  */
+    /* .navbar a {
         top: 50px;
-    }
+    } */
 
-} */
+}
 
 /* @media for dekstop screen size, ease in to a side nav on the left with rotation, so that the */
