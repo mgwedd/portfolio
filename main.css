@@ -74,11 +74,38 @@ a {
     display: none;
 }
 
+/* BLOG STYLES */
+
+.blog-post-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 150px 100px 150px;
+}
+
+.read-more-icon {
+    height: 75px;
+    width: 75px;
+}
+
+/* Styles for the top left corner M/W logo */
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+    width: 50px;
+}
 /* RESPONSIVE MEDIA QUERIES */
 @media (min-width: 320px) and (max-width: 768px) {
 
     .navbar {
-        height: 125px;
+        height: 100px;
+    }
+
+    .navbar > a {
+        font-size: 25px;
     }
 
     /* You need to center vertically the text on the higher mobile navbar size  */
