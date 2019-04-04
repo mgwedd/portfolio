@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Merriweather', serif;
+    font-family: 'Quattrocento', serif;
 }
 
 /* Main as a flex container */
@@ -29,18 +29,38 @@ main {
     justify-content: center;
 }
 
+h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
 /* TYPEWRITER STYLES */
 .typewriter {
     margin-left: 100px;
     margin-right: 100px;
     font-size: 25px;
+    line-height: 35px;
 }
 
 /* NAV BAR STYLES */
 
 a {
+    text-decoration: none;
     margin: 0 auto;
     transition: all .15s ease-in-out;
+    font-family: 'Oswald', sans-serif;
+}
+
+.blog-preview-title:hover {
+    background-color: #99B898;
+    color: white;
+    transform: scale(1.025);
+    transition: all .15s ease-in-out;
+    padding: 5px 10px 5px 10px;
+}
+
+.blog-preview-title:active {
+    background-color: black;
+    color: white;
 }
 
 .navbar {
@@ -63,8 +83,8 @@ a {
 }
 
 .navbar a:hover, .active{
-    background-color: #e2725b;
-    color: black;
+    background-color: #778899;
+    color: white;
     transform: scale(1.15);
     transition: all .15s ease-in-out;
 }
@@ -76,17 +96,58 @@ a {
 
 /* BLOG STYLES */
 
+.blog-container {
+    margin-top: 250px;
+    margin-bottom: 50px;
+}
+
 .blog-post-preview {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 100px 150px 100px 150px;
+    margin: 20px 20px 20px 20px;
 }
 
-.read-more-icon {
+.blog-post-preview > p {
+    max-width: 400px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* .read-more-icon {
     height: 75px;
     width: 75px;
+} */
+
+/* PROJECT STYLES */
+.project, .projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-container {
+    margin-top: 50px;
+}
+
+.project-description {
+    display: block;
+    margin: 25px 100px 100px 100px;
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.project-screenshot {
+    height: 300px;
+    width: 300px;
+    filter: drop-shadow(10px 4px 2px #D3D3D3);
+}
+
+.project-screenshot:hover {
+    transform: scale(1.025);
+    transition: all .15s ease-in-out;
 }
 
 /* Styles for the top left corner M/W logo */
@@ -97,7 +158,36 @@ a {
     height: 50px;
     width: 50px;
 }
+
+/* CONTACT STYLES */
+
+.contact-phrase {
+    font-size: 30px;
+}
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Why won't this become a double column? Because img is nested in a? https://www.sketchingwithcss.com/samplechapter/cheatsheet.html */
+.contact-icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-content: center;
+}
+
+.contact-icons-container img {
+    width: 50px;
+    height: 50px;
+}
+
 /* RESPONSIVE MEDIA QUERIES */
+
+/* FOR MOBILE VIEWS */
 @media (min-width: 320px) and (max-width: 768px) {
 
     .navbar {
@@ -112,7 +202,31 @@ a {
     /* .navbar a {
         top: 50px;
     } */
-
 }
+
+/*  FOR DESKTOP VIEWS */
+/* @media (min-width: 850px) {
+    .blog-container {
+        flex-direction: row;
+    } */
+    /* switch to left side nav for desktop */
+    /* .navbar {
+        overflow: hidden;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        display: flex;
+        background-color: black;
+    }
+    .navbar > a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 40px;
+    } 
+}*/
 
 /* @media for dekstop screen size, ease in to a side nav on the left with rotation, so that the */
