@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Michael Wedd's Portfolio</title>
+  <meta name="description" content="Michael Wedd's personal portfolio website, including his projects, blog and contact information.">
+  <meta name="author" content="Michael Wedd">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/mw_logo.png"/>
+  <script src="https://cdn.jsdelivr.net/npm/typeit@6/dist/typeit.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="assets/mw_logo.png" id="logo"></img>
+    </header>
+    <section class="typewriter-container">
+        <h2 id="intro-typewriter" class="typewriter">Hi, I’m Michael: a full-stack web developer who combines anthropology with technology to foster empathy.</h2>
+    </section>
+    <main>
+        <div class="projects-container">
+            <div class="project">
+                    <h2 class="project-title">Google Cloud Quiz App</h2>
+                    <a href="https://mgwedd.github.io/gcpquiz/">
+                        <img class="project-screenshot" src="assets/quiz_app.png" alt="A jQuery-based quiz app to prepare people for the Google Cloud Data Engineering Certifications">
+                    </a>
+                    <div class="project-description">
+                        <p>The engineers at Leverege were studying for Google Cloud certifications, so I made a quiz app to help them out. This minimalistic quizz app, written with jQuery, 
+                        allows users to test their knowledge of questions likely to come up on the Google Cloud Data Engineering certification.</p>
+                        <p><strong>Technologies</strong>: HTML5, CSS3, Javascript, jQuery</p>
+                        <p><strong>Live App</strong>: <a href="https://mgwedd.github.io/gcpquiz/">Take the quiz here</a></p>
+                        <p><strong>Repo</strong>: <a href="https://github.com/mgwedd/gcpquiz">Show me the code</a></p> 
+                    </div> 
+            </div>
+        </div>             
+    </main> 
+    <nav class="navbar">
+        <a href="projects.html" class="active">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <script src="scripts.js"></script>
+</body>
+</html>
