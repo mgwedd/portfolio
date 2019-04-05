@@ -43,13 +43,6 @@ h2 {
 }
 
 /* NAV BAR STYLES */
-a {
-    text-decoration: none;
-    margin: 0 auto;
-    transition: all .15s ease-in-out;
-    font-family: 'Oswald', sans-serif;
-}
-
 .navbar {
     overflow: hidden;
     position: fixed;
@@ -67,12 +60,15 @@ a {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 40px;
+    margin: 0 auto;
+    transition: all .15s ease-in-out;
+    font-family: 'Oswald', sans-serif;
 }
 
 .navbar a:hover, .active{
-    background-color: #778899;
+    background-color: #3B4483;
     color: white;
-    transform: scale(1.15);
+    transform: scale(1.05);
     transition: all .15s ease-in-out;
 }
 
@@ -95,14 +91,13 @@ a {
 .project-screenshot {
     height: 300px;
     width: 300px;
-    filter: drop-shadow(10px 4px 2px #D3D3D3);
 }
 
 .project-screenshot:hover {
-    transform: scale(1.05);
-    transition: all .15s ease-in-out;
-    position : relative
-}
+    background-color: #3B4483;
+    color: white;
+    transform: scale(1.015);
+    transition: all .15s ease-in-out;}
 
 /* BLOG STYLES */
 .blog-container {
@@ -116,24 +111,30 @@ a {
     max-width: 400px;
 }
 
-.blogpost-summary {
+.blogpost-summary > p {
     max-width: 400px;
-    font-size: 20px;
+    font-size: 50px;
     line-height: 30px;
     display: inline-block;
     text-align: left;
 }
 
+.blogpost-title {
+    color: white;
+    background-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
 .blogpost-title:hover {
-    background-color: gray;
+    background-color: #3B4483;
     color: white;
     transform: scale(1.025);
     transition: all .15s ease-in-out;
-    padding: 5px;
 }
 
 .blogpost-title:active {
-    background-color: #778899;
+    background-color: #3B4483;
     color: white;
 }
 
@@ -171,16 +172,8 @@ a {
     width: 50px;
 }
 
-/* FOR MOBILE VIEWS */
+/* FOR SMARTPHONE VIEWS */
 @media (min-width: 320px) and (max-width: 768px) {
-
-    #intro-typewriter {
-        font-size: 16px;
-        margin: 50px auto;
-        width: 300px;
-        height: 100px;
-    }
-
     .navbar {
         height: 100px;
     }
@@ -200,10 +193,12 @@ a {
         max-width: 300px;
     }
 
-    /* You need to center vertically the text on the higher mobile navbar size  */
-    /* .navbar a {
-        top: 50px;
-    } */
+    #intro-typewriter {
+        font-size: 16px;
+        margin: 50px auto;
+        width: 300px;
+        height: 100px;
+    }
 }
 
 /*  FOR DESKTOP VIEWS */
