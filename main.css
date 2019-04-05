@@ -2,6 +2,7 @@
 *, *:before, *:after{
     text-decoration: none;
     box-sizing: inherit;
+    overflow-x: hidden;
 }
 
 html {
@@ -15,18 +16,8 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin: auto;
     font-family: 'Quattrocento', serif;
-}
-
-/* Main as a flex container */
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 h2 {
@@ -34,33 +25,29 @@ h2 {
 }
 
 /* TYPEWRITER STYLES */
-.typewriter {
-    margin-left: 100px;
-    margin-right: 100px;
-    font-size: 25px;
-    line-height: 35px;
+.header-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+}
+
+#intro-typewriter {
+    margin-top: 100px;
+    margin-left: 25px;
+    word-wrap:break-word;
+    height: 165px;
+    font-size: 16px;
+    line-height: 25px;
 }
 
 /* NAV BAR STYLES */
-
 a {
     text-decoration: none;
     margin: 0 auto;
     transition: all .15s ease-in-out;
     font-family: 'Oswald', sans-serif;
-}
-
-.blog-preview-title:hover {
-    background-color: #99B898;
-    color: white;
-    transform: scale(1.025);
-    transition: all .15s ease-in-out;
-    padding: 5px 10px 5px 10px;
-}
-
-.blog-preview-title:active {
-    background-color: black;
-    color: white;
 }
 
 .navbar {
@@ -94,47 +81,13 @@ a {
     display: none;
 }
 
-/* BLOG STYLES */
-
-.blog-container {
-    margin-top: 250px;
-    margin-bottom: 50px;
-}
-
-.blog-post-preview {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 20px 20px 20px;
-}
-
-.blog-post-preview > p {
-    max-width: 400px;
-    font-size: 20px;
-    line-height: 30px;
-}
-
-/* .read-more-icon {
-    height: 75px;
-    width: 75px;
-} */
-
 /* PROJECT STYLES */
-.project, .projects-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .projects-container {
-    margin-top: 50px;
+    margin-left: 300px; 
 }
 
 .project-description {
-    display: block;
-    margin: 25px 100px 100px 100px;
-    max-width: 500px;
+    max-width: 400px;
     font-size: 16px;
     line-height: 25px;
 }
@@ -146,21 +99,45 @@ a {
 }
 
 .project-screenshot:hover {
-    transform: scale(1.025);
+    transform: scale(1.05);
     transition: all .15s ease-in-out;
+    position : relative
 }
 
-/* Styles for the top left corner M/W logo */
-#logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    height: 50px;
-    width: 50px;
+/* BLOG STYLES */
+.blog-container {
+    text-align: center;
+}
+
+.blogpost {
+    text-align: center;
+    display: inline-block;
+    margin: 20px 20px 20px 20px;
+    max-width: 400px;
+}
+
+.blogpost-summary {
+    max-width: 400px;
+    font-size: 20px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: left;
+}
+
+.blogpost-title:hover {
+    background-color: gray;
+    color: white;
+    transform: scale(1.025);
+    transition: all .15s ease-in-out;
+    padding: 5px;
+}
+
+.blogpost-title:active {
+    background-color: #778899;
+    color: white;
 }
 
 /* CONTACT STYLES */
-
 .contact-phrase {
     font-size: 30px;
 }
@@ -185,10 +162,24 @@ a {
     height: 50px;
 }
 
-/* RESPONSIVE MEDIA QUERIES */
+/* Styles for the top left corner M/W logo */
+#logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+    width: 50px;
+}
 
 /* FOR MOBILE VIEWS */
 @media (min-width: 320px) and (max-width: 768px) {
+
+    #intro-typewriter {
+        font-size: 16px;
+        margin: 50px auto;
+        width: 300px;
+        height: 100px;
+    }
 
     .navbar {
         height: 100px;
@@ -196,6 +187,17 @@ a {
 
     .navbar > a {
         font-size: 25px;
+        padding-top: 35px
+    }
+    
+    .header-container {
+        position: static;
+        width: auto;
+    }
+
+    .projects-container {
+        margin: auto;
+        max-width: 300px;
     }
 
     /* You need to center vertically the text on the higher mobile navbar size  */
