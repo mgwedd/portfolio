@@ -54,12 +54,13 @@ h2 {
 
 .navbar > a {
     float: left;
+    flex: 1;
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 25px;
     margin: 0 auto;
     transition: all .15s ease-in-out;
     font-family: 'Oswald', sans-serif;
@@ -80,6 +81,7 @@ h2 {
 /* PROJECT STYLES */
 .projects-container {
     margin-left: 300px; 
+    padding-bottom: 100px;
 }
 
 .project-description {
@@ -97,17 +99,22 @@ h2 {
     background-color: #3B4483;
     color: white;
     transform: scale(1.015);
-    transition: all .15s ease-in-out;}
+    transition: all .15s ease-in-out;
+    z-index: 1;
+}
 
 /* BLOG STYLES */
 .blog-container {
-    text-align: center;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .blogpost {
     text-align: center;
     display: inline-block;
-    margin: 20px 20px 20px 20px;
+    margin: 20px;
     max-width: 400px;
 }
 
@@ -178,12 +185,12 @@ p {
 /* FOR SMARTPHONE VIEWS */
 @media (min-width: 320px) and (max-width: 768px) {
     .navbar {
-        height: 100px;
+        height: 75px;
     }
 
     .navbar > a {
         font-size: 25px;
-        padding-top: 35px
+        padding-top: 25px
     }
     
     .header-container {
@@ -194,6 +201,8 @@ p {
     .projects-container {
         margin: auto;
         max-width: 300px;
+        padding-bottom: 100px;
+        z-index: 0;
     }
 
     #intro-typewriter {
