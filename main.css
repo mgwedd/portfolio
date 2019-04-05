@@ -84,7 +84,7 @@ h2 {
 
 .project-description {
     max-width: 400px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 25px;
 }
 
@@ -117,7 +117,7 @@ h2 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 25px;
     text-align: left;
 }
@@ -197,10 +197,11 @@ p {
     }
 
     #intro-typewriter {
-        font-size: 16px;
+        font-size: 25px;
+        line-height: 35;
         margin: 50px auto;
         width: 300px;
-        height: 100px;
+        height: 150px;
     }
 }
 
