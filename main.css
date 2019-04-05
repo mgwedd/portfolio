@@ -111,11 +111,14 @@ h2 {
     max-width: 400px;
 }
 
-.blogpost-summary > p {
+.blogpost-summary {
     max-width: 400px;
-    font-size: 50px;
-    line-height: 30px;
     display: inline-block;
+}
+
+p {
+    font-size: 16px;
+    line-height: 25px;
     text-align: left;
 }
 
