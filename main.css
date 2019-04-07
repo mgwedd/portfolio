@@ -2,7 +2,6 @@
 *, *:before, *:after{
     text-decoration: none;
     box-sizing: inherit;
-    overflow-x: hidden;
 }
 
 html {
@@ -16,12 +15,13 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
-    font-family: 'Quattrocento', serif;
+    margin: 0;
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
 }
 
 h2 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Ruda', sans-serif;
 }
 
 /* TYPEWRITER STYLES */
@@ -34,12 +34,13 @@ h2 {
 }
 
 #intro-typewriter {
-    margin-top: 100px;
+    margin-top: 200px;
     margin-left: 25px;
-    word-wrap:break-word;
+    word-wrap: break-word;
     height: 165px;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 25px;
+    font-weight: normal;
 }
 
 /* NAV BAR STYLES */
@@ -81,23 +82,24 @@ h2 {
 /* PROJECT STYLES */
 .projects-container {
     margin-left: 300px; 
-    padding-bottom: 100px;
+    text-align: center;
 }
 
 .project-description {
     max-width: 400px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 25px;
+    margin: auto;
+    padding-bottom: 100px;
 }
 
 .project-screenshot {
-    height: 300px;
-    width: 300px;
+    max-height: 375px;
+    max-width: 375px;
 }
 
 .project-screenshot:hover {
     background-color: #3B4483;
-    color: white;
     transform: scale(1.015);
     transition: all .15s ease-in-out;
     z-index: 1;
@@ -124,7 +126,7 @@ h2 {
 }
 
 p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 25px;
     text-align: left;
 }
@@ -149,28 +151,33 @@ p {
 }
 
 /* CONTACT STYLES */
+
+.contact-container {
+    text-align: center;
+    margin-top: 25vh;
+    padding-bottom: 100px;
+}
 .contact-phrase {
     font-size: 30px;
 }
 
-.contacts-container {
+.contact-icons-container {
+    min-height: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
 }
 
-/* Why won't this become a double column? Because img is nested in a? https://www.sketchingwithcss.com/samplechapter/cheatsheet.html */
-.contact-icons-container {
+.col-1, .col-2 {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    flex-flow: column wrap;
-    align-content: center;
 }
 
 .contact-icons-container img {
     width: 50px;
     height: 50px;
+    margin: 30px;
 }
 
 /* Styles for the top left corner M/W logo */
@@ -183,7 +190,7 @@ p {
 }
 
 /* FOR SMARTPHONE VIEWS */
-@media (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
     .navbar {
         height: 75px;
     }
@@ -200,43 +207,40 @@ p {
 
     .projects-container {
         margin: auto;
-        max-width: 300px;
+        max-width: 375px;
         padding-bottom: 100px;
-        z-index: 0;
+        text-align: center;
+        z-index: -1;
+    }
+
+    .contact-container {
+        margin-top: 10vh;
+    }
+
+    .contact-phrase {
+        font-size: 20px;
+    }
+
+    .contact-icons-container img {
+        width: 40px;
+        height: 40px;
+        margin: 20px;
+    }
+
+    .col-1, .col-2 {
+        flex-direction: column;
+        align-items: center;
     }
 
     #intro-typewriter {
-        font-size: 25px;
-        line-height: 35;
-        margin: 50px auto;
+        font-size: 20px;
+        line-height: 25px;
+        margin: 100px auto;
         width: 300px;
         height: 150px;
     }
-}
 
-/*  FOR DESKTOP VIEWS */
-/* @media (min-width: 850px) {
-    .blog-container {
-        flex-direction: row;
-    } */
-    /* switch to left side nav for desktop */
-    /* .navbar {
-        overflow: hidden;
-        position: fixed;
-        left: 0;
-        width: 100%;
-        display: flex;
-        background-color: black;
+    #logo {
+        position: static;
     }
-    .navbar > a {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 40px;
-    } 
-}*/
-
-/* @media for dekstop screen size, ease in to a side nav on the left with rotation, so that the */
+}
